@@ -39,7 +39,7 @@ const Edit = styled('div')`
 export default class MDXRuntimeTest extends Component {
   render() {
     const { data } = this.props;
-    if(!data) {
+    if (!data) {
       return null;
     }
     const {
@@ -78,7 +78,7 @@ export default class MDXRuntimeTest extends Component {
       }, [])
       .concat(navItems.items)
       .map(slug => {
-        if(slug) {
+        if (slug) {
           const { node } = allMdx.edges.find(
             ({ node }) => node.fields.slug === slug
           );
@@ -97,7 +97,7 @@ export default class MDXRuntimeTest extends Component {
     return (
       <Layout {...this.props}>
         <Helmet>
-          {metaTitle ? <title>{metaTitle}</title> : null }
+          {metaTitle ? <title>{metaTitle}</title> : null}
           {metaTitle ? <meta name="title" content={metaTitle} /> : null}
           {metaDescription ? <meta name="description" content={metaDescription} /> : null}
           {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
